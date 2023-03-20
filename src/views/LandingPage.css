@@ -1,0 +1,65 @@
+.section-about-us {
+  background-color: #373e98;
+}
+
+.description {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  width: 100%;
+}
+
+.top-title {
+  margin-top: 50px;
+}
+
+.about-us-intro {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 0px 90px 0px 0px;
+}
+
+.about-us-full {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 0px 90px 0px 0px;
+}
+
+.profile-title .profile-text {
+  color: rgb(0, 0, 0);
+}
+
+.profile-title {
+  margin-top: 20px;
+}
+
+.profile-picture {
+  border-radius: 50px;
+  height: 70%;
+  width: 80%;
+}
+
+#landing-page-title {
+  font-weight: 900;
+  font-size: 70px;
+  color: rgb(255, 255, 255);
+}
+
+#about-us-title {
+  font-weight: 900;
+  font-size: 70px;
+  color: rgb(255, 255, 255);
+  margin-top: 60px;
+  margin-right: 100px;
+}
+
+#team-title {
+  text-align: center;
+}
+
+#sarah-profile-picture {
+  margin-top: 30px;
+}

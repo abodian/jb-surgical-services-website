@@ -14,12 +14,19 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
+// import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
+import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg'
+import SarahProfilePicture from '../assets/img/sarahprofile.JPEG'
+import JemSarahWalk from '../assets/img/jemsarahwalk.jpg'
+
+
+require('./LandingPage.css')
 
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
+  
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -35,18 +42,13 @@ function LandingPage() {
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        <LandingPageHeader />
         <div className="section section-about-us">
-          <Container>
+          <Container className="ml-auto mr-auto text-center">
+         <div className='top-title'><h1 id='landing-page-title'>Jeremy Bodian <br></br>Surgical Services</h1></div>
             <Row>
-              <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Who we are?</h2>
+              <Col className="ml-auto mr-auto text-center" md="12">
                 <h5 className="description">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record low maximum sea ice extent tihs year down
-                  to low ice extent in the Pacific and a late drop in ice extent
-                  in the Barents Sea.
+                <b>Orthopaedic and soft tissue inhouse surgical consultancy in Lincolnshire and South Yorkshire</b><br></br>
                 </h5>
               </Col>
             </Row>
@@ -58,204 +60,99 @@ function LandingPage() {
                     className="image-container image-left"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/login.jpg") + ")"
+                        "url(" + require("assets/img/jemsarahdog.jpg") + ")"
                     }}
                   >
-                    <p className="blockquote blockquote-info">
-                      "Over the span of the satellite record, Arctic sea ice has
-                      been declining significantly, while sea ice in the
-                      Antarctichas increased very slightly" <br></br>
-                      <br></br>
-                      <small>-NOAA</small>
-                    </p>
                   </div>
-                  <div
-                    className="image-container"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
-                    }}
-                  ></div>
+                  <div className='about-us-title'><h1 id='about-us-title'>About Us</h1></div> 
+                  <div className='about-us-intro'>JB Surgical Services are an established independent service, consisting of husband and wife, Jeremy and Sarah Bodian. 
+                  </div>
                 </Col>
                 <Col md="5">
                   <div
                     className="image-container image-right"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg1.jpg") + ")"
+                        "url(" + require("assets/img/jeremysarahprof.jpg") + ")"
                     }}
                   ></div>
-                  <h3>
-                    So what does the new record for the lowest level of winter
-                    ice actually mean
-                  </h3>
-                  <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
-                  </p>
-                  <p>
-                    For a start, it does not automatically follow that a record
-                    amount of ice will melt this summer. More important for
-                    determining the size of the annual thaw is the state of the
-                    weather as the midnight sun approaches and temperatures
-                    rise. But over the more than 30 years of satellite records,
-                    scientists have observed a clear pattern of decline,
-                    decade-by-decade.
-                  </p>
-                  <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
-                  </p>
                 </Col>
+                <div className='about-us-full'>Our mission is to alleviate the pain and suffering of our patients through a combination of surgery and/or rehabilitation. 
+                It is important to us that clients receive excellent unbiased communication at all stages. The practices we work with are treated with friendly respect,
+                the goal being to integrate as a true member of the team. 
+                  </div>
               </Row>
             </div>
           </Container>
         </div>
-        <div className="section section-team text-center">
-          <Container>
-            <h2 className="title">Here is our team</h2>
-            <div className="team">
-              <Row>
-                <Col md="4">
-                  <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/avatar.jpg")}
-                    ></img>
-                    <h4 className="title">Romina Hadid</h4>
-                    <p className="category text-info">Model</p>
-                    <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-facebook-square"></i>
-                    </Button>
-                  </div>
-                </Col>
-                <Col md="4">
-                  <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/ryan.jpg")}
-                    ></img>
-                    <h4 className="title">Ryan Tompson</h4>
-                    <p className="category text-info">Designer</p>
-                    <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-linkedin"></i>
-                    </Button>
-                  </div>
-                </Col>
-                <Col md="4">
-                  <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/eva.jpg")}
-                    ></img>
-                    <h4 className="title">Eva Jenner</h4>
-                    <p className="category text-info">Fashion</p>
-                    <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-google-plus"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-youtube"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          </Container>
-        </div>
+        <div className="text-center">
+          <Container className="ml-auto mr-auto text-center">
+          <h2 className="title" id="team-title">Here is our team</h2>
+          <Row>
+            <Col md="6">
+              <div className="team left-column-profile">
+                <div>
+                  <img className="profile-picture" src={JeremyProfilePicture} alt="Jeremy-Profile" />
+                </div>
+                <div className='profile-title'><h1 id='jeremy-profile-title'>Jeremy Bodian</h1></div> 
+                <div className='profile-title'><h3 id='jeremy-profile-title'>Clinical Director</h3></div> 
+                <div className='profile-text'>
+                <p>My love of animals and science led me to achieve a Bachelor of Veterinary Science at Bristol University 2008
+                BVSc. After two years in a “mixed veterinary” environment I decided to focus purely on “small animal”
+                practice. I moved to Lincolnshire, married and started a family with Sarah in 2011 and have worked in private
+                and charity hospitals, most recently at Clinical Director level.
+                </p>
+                <p>After further surgical training I was awarded the British Small Animal Veterinary Association Post Graduate
+                Certificate (Distinction) in Small Animal Surgery BSAVA PGcertSAS in 2016. A further focus in musculoskeletal
+                disease led me to complete the European School of Post Graduate Studies General Practitioner Advanced
+                Certificate in Small Animal Orthopaedic Surgery GPAdvCert (SAOS) in 2019.
+                </p>
+                <p>I now work independently as a “peripatetic vet” traveling to a variety of general practices and private clients
+                in Lincolnshire and beyond offering my skills and services. I have found this the most rewarding phase of my
+                career so far with more time devoted to my patients and clients consequently.
+                </p>
+                <p>Whilst I am primarily a surgeon, my view is to continue to develop treatment of my patients in the most
+                holistic manner possible. I have a special interest in musculoskeletal function and pain management. I ask
+                myself how can I make the greatest impact? Pain in animals is the most common condition we see as vets
+                and the greatest area for improvement. My goal is therefore the “management of pain and promotion of
+                quality of life”.
+                </p>
+                <p>Sarah my wife, Isabella and Amelia my daughters, are my inspiration. If I have any time between work and
+                family (rare), I can be seen exploring the countryside on my bike or visiting the clouds in a plane.
+                Significantly I have three boxers (Bee, Flo and Moby), one Beagle (Clause) and one tabby cat (Mustafa). They
+                have learned to accept me as an owner despite being a VET! I also inherit every clients animal friend as my
+                own whilst under my care.
+                </p>
+                </div>
+              </div>
+            </Col>
+            <Col md="6">
+              <div className="team right-column-profile">
+                <div>
+                  <img id="sarah-profile-picture" className="profile-picture" src={SarahProfilePicture} alt="Sarah-Profile" />
+                </div>
+                <div className='profile-title'><h1 id='jeremy-profile-title'>Sarah Bodian</h1></div> 
+                <div className='profile-title'><h3 id='jeremy-profile-title'>Head Nurse</h3></div> 
+                <div className='profile-text'>
+                <p>I qualified as a Registered Veterinary Nurse from Myerscough college in 2009 and since have been
+                working in a busy small animal hospital enjoying all areas in veterinary nursing.
+                </p> 
+                <p>I especially enjoy spending time consulting with clients and being hands on with my patients.
+                In work mode, I often help in clinic with surgical procedures and with rehabilitation post operation.
+                </p>
+                <p>At all other times I am in the middle of a very busy household. I enjoy country walks and picnics with
+                the family and horse riding when time permits.
+                </p>
+                </div>
+                <div>
+                  <img id="dog-walking" className="profile-picture" src={JemSarahWalk} alt="JS-Dog-Walking" />
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
         <div className="section section-contact-us text-center">
           <Container>
             <h2 className="title">Want to work with us?</h2>
