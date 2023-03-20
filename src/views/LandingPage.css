@@ -42,6 +42,10 @@
   width: 80%;
 }
 
+.left-column-profile {
+  margin-bottom: 50px;
+}
+
 #landing-page-title {
   font-weight: 900;
   font-size: 70px;
@@ -56,8 +60,18 @@
   margin-right: 100px;
 }
 
-#team-title {
+#our-services-title {
+  font-weight: 900;
+  font-size: 70px;
+  color: rgb(255, 255, 255);
+}
+
+#our-team-title {
   text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: 70px;
+  margin-top: 50px;
 }
 
 #sarah-profile-picture {
