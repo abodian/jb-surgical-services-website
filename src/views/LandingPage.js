@@ -15,6 +15,7 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import ServicesCarousel from "components/Carousels/ServicesCarousel.js"
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg'
 import SarahProfilePicture from '../assets/img/sarahprofile.JPEG'
@@ -170,7 +171,6 @@ function LandingPage() {
                     </p>
                   </div>
                   
-                  
                   <div className="team right-column-profile">
                     <div style={styles.fadeIn}>
                       <img className="profile-picture" src={JemSarahWalk} alt="JS-Dog-Walk" />
@@ -187,6 +187,8 @@ function LandingPage() {
         
         <Container className="ml-auto mr-auto text-center">
           <div className='about-us-title'><h1 id='our-services-title'>Our Services</h1></div> 
+          <ServicesCarousel/>
+
         </Container>
         </div>
         </div>
