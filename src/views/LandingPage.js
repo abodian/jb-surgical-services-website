@@ -15,7 +15,7 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ServicesCarousel from "components/Carousels/ServicesCarousel.js"
+import OurServices from "./OurServices.js"
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg'
 import SarahProfilePicture from '../assets/img/sarahprofile.JPEG'
@@ -42,7 +42,7 @@ function LandingPage() {
 
   const styles = {
     fadeIn: {
-      animation: 'x 2s',
+      animation: 'x 1s',
       animationName: Radium.keyframes(fadeIn, 'fadeIn')
     }
   }
@@ -150,9 +150,9 @@ function LandingPage() {
                   <div  className="team right-column-profile">
                   
                   
-                    <div className="team left-column-profile">
+                    <div className="team right-column-profile">
                       <div style={styles.fadeIn}>
-                        <img className="profile-picture" src={SarahProfilePicture} alt="Sarah-Profile" />
+                        <img id='sarah-profile-picture' className="profile-picture" src={SarahProfilePicture} alt="Sarah-Profile" />
                       </div>
                     </div>
                   
@@ -187,7 +187,7 @@ function LandingPage() {
         
         <Container className="ml-auto mr-auto text-center">
           <div className='about-us-title'><h1 id='our-services-title'>Our Services</h1></div> 
-          <ServicesCarousel/>
+          <OurServices/>
 
         </Container>
         </div>
