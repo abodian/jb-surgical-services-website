@@ -1,4 +1,10 @@
 import React from "react";
+import {useRef} from "react";
+// animation
+import { fadeIn } from 'react-animations'
+import Radium, {StyleRoot} from 'radium';
+import { useInViewport } from 'react-in-viewport';
+
 
 // reactstrap components
 import {
@@ -9,7 +15,6 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-// import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg'
 import SarahProfilePicture from '../assets/img/sarahprofile.JPEG'
@@ -19,6 +24,8 @@ import JemSarahWalk from '../assets/img/jemsarahwalk.jpg'
 require('./LandingPage.css')
 
 function LandingPage() {
+  const myRef = useRef();
+  const { inViewport } = useInViewport(myRef);
   
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -31,11 +38,20 @@ function LandingPage() {
       document.body.classList.remove("sidebar-collapse");
     };
   }, []);
+
+  const styles = {
+    fadeIn: {
+      animation: 'x 2s',
+      animationName: Radium.keyframes(fadeIn, 'fadeIn')
+    }
+  }
+
   return (
     <>
+    <StyleRoot>
       <ExamplesNavbar />
       <div className="wrapper">
-        <div className="section section-about-us">
+        <div ref={myRef} className="section section-about-us">
           <Container className="ml-auto mr-auto text-center">
          <div className='top-title'><h1 id='landing-page-title'>Jeremy Bodian <br></br>Surgical Services</h1></div>
             <Row>
@@ -49,14 +65,16 @@ function LandingPage() {
             <div className="section-story-overview">
               <Row>
                 <Col md="6">
-                  <div
-                    className="image-container image-left"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/jemsarahdog.jpg") + ")"
-                    }}
-                  >
-                  </div>
+                  
+                    <div
+                      className="image-container image-left"
+                      style={{
+                        backgroundImage: `url(${require("assets/img/jemsarahdog.jpg")})`,
+                        ...styles.fadeIn,
+                      }}
+                    >
+                    </div>
+                  
                   <div className='about-us-title'><h1 id='about-us-title'>About Us</h1></div> 
                   <div className='about-us-intro'>JB Surgical Services are an established independent service, consisting of husband and wife, Jeremy and Sarah Bodian. 
                   </div>
@@ -65,8 +83,8 @@ function LandingPage() {
                   <div
                     className="image-container image-right"
                     style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/jeremysarahprof.jpg") + ")"
+                      backgroundImage: `url(${require("assets/img/jeremysarahprof.jpg")})`,
+                      ...styles.fadeIn,
                     }}
                   ></div>
                 </Col>
@@ -82,11 +100,17 @@ function LandingPage() {
           <Container className="ml-auto mr-auto text-center">
           <h1 id='our-team-title'>Our Team</h1>
           <Row>
-            <Col md="6">
-              <div className="team left-column-profile">
-                <div>
-                  <img className="profile-picture" src={JeremyProfilePicture} alt="Jeremy-Profile" />
+            <Col ref={myRef} md="6">
+              <div  className="team left-column-profile">
+
+              {inViewport && (
+                <div className="team left-column-profile">
+                  <div style={styles.fadeIn}>
+                    <img className="profile-picture" src={JeremyProfilePicture} alt="Jeremy-Profile" />
+                  </div>
                 </div>
+              )}
+
                 <div className='profile-title'><h1 id='jeremy-profile-title'>Jeremy Bodian</h1></div> 
                 <div className='profile-title'><h3 id='jeremy-profile-title'>Clinical Director</h3></div> 
                 <div className='profile-text'>
@@ -119,41 +143,54 @@ function LandingPage() {
                 </div>
               </div>
             </Col>
-            <Col md="6">
-              <div className="team right-column-profile">
-                <div>
-                  <img id="sarah-profile-picture" className="profile-picture" src={SarahProfilePicture} alt="Sarah-Profile" />
+            <Col  md="6">
+              <div ref={myRef}>
+                {inViewport && (
+                  <div  className="team right-column-profile">
+                  
+                  
+                    <div className="team left-column-profile">
+                      <div style={styles.fadeIn}>
+                        <img className="profile-picture" src={SarahProfilePicture} alt="Sarah-Profile" />
+                      </div>
+                    </div>
+                  
+                  
+                  <div className='profile-title'><h1 id='jeremy-profile-title'>Sarah Bodian</h1></div> 
+                  <div className='profile-title'><h3 id='jeremy-profile-title'>Head Nurse</h3></div> 
+                  <div className='profile-text'>
+                    <p>I qualified as a Registered Veterinary Nurse from Myerscough college in 2009 and since have been
+                    working in a busy small animal hospital enjoying all areas in veterinary nursing.
+                    </p> 
+                    <p>I especially enjoy spending time consulting with clients and being hands on with my patients.
+                    In work mode, I often help in clinic with surgical procedures and with rehabilitation post operation.
+                    </p>
+                    <p>At all other times I am in the middle of a very busy household. I enjoy country walks and picnics with
+                    the family and horse riding when time permits.
+                    </p>
+                  </div>
+                  
+                  
+                  <div className="team right-column-profile">
+                    <div style={styles.fadeIn}>
+                      <img className="profile-picture" src={JemSarahWalk} alt="JS-Dog-Walk" />
+                    </div>
+                  </div>
+                  
                 </div>
-                <div className='profile-title'><h1 id='jeremy-profile-title'>Sarah Bodian</h1></div> 
-                <div className='profile-title'><h3 id='jeremy-profile-title'>Head Nurse</h3></div> 
-                <div className='profile-text'>
-                <p>I qualified as a Registered Veterinary Nurse from Myerscough college in 2009 and since have been
-                working in a busy small animal hospital enjoying all areas in veterinary nursing.
-                </p> 
-                <p>I especially enjoy spending time consulting with clients and being hands on with my patients.
-                In work mode, I often help in clinic with surgical procedures and with rehabilitation post operation.
-                </p>
-                <p>At all other times I am in the middle of a very busy household. I enjoy country walks and picnics with
-                the family and horse riding when time permits.
-                </p>
-                </div>
-                <div>
-                  <img id="dog-walking" className="profile-picture" src={JemSarahWalk} alt="JS-Dog-Walking" />
-                </div>
+              )}
               </div>
             </Col>
           </Row>
         </Container>
         <div className="section section-about-us">
-          <Container className="ml-auto mr-auto text-center">
+        
+        <Container className="ml-auto mr-auto text-center">
           <div className='about-us-title'><h1 id='our-services-title'>Our Services</h1></div> 
-            <div className="separator separator-primary"></div>
-            <div className="section-story-overview">
-              
-            </div>
-          </Container>
+        </Container>
         </div>
-      </div>
+        </div>
+      
 
 
         <div className="section section-contact-us text-center">
@@ -169,6 +206,7 @@ function LandingPage() {
         </div>
         <DefaultFooter />
       </div>
+      </StyleRoot>
     </>
   );
 }
