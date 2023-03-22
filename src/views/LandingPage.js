@@ -2,6 +2,7 @@ import React from "react";
 import {useRef} from "react";
 // animation
 import { fadeIn } from 'react-animations'
+import { UncontrolledCollapse } from "reactstrap";
 import Radium, {StyleRoot} from 'radium';
 import { useInViewport } from 'react-in-viewport';
 import { SiMinutemailer } from 'react-icons/si';
@@ -22,7 +23,7 @@ import OurServices from "./OurServices.js"
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg'
 import SarahProfilePicture from '../assets/img/sarahprofile.JPEG'
-import JemSarahWalk from '../assets/img/jemsarahwalk.jpg'
+// import JemSarahWalk from '../assets/img/jemsarahwalk.jpg'
 
 
 require('./LandingPage.css')
@@ -131,23 +132,39 @@ function LandingPage() {
                 disease led me to complete the European School of Post Graduate Studies General Practitioner Advanced
                 Certificate in Small Animal Orthopaedic Surgery GPAdvCert (SAOS) in 2019.
                 </p>
-                <p>I now work independently as a “peripatetic vet” traveling to a variety of general practices and private clients
-                in Lincolnshire and beyond offering my skills and services. I have found this the most rewarding phase of my
-                career so far with more time devoted to my patients and clients consequently.
-                </p>
-                <p>Whilst I am primarily a surgeon, my view is to continue to develop treatment of my patients in the most
-                holistic manner possible. I have a special interest in musculoskeletal function and pain management. I ask
-                myself how can I make the greatest impact? Pain in animals is the most common condition we see as vets
-                and the greatest area for improvement. My goal is therefore the “management of pain and promotion of
-                quality of life”.
-                </p>
-                <p>Sarah my wife, Isabella and Amelia my daughters, are my inspiration. If I have any time between work and
-                family (rare), I can be seen exploring the countryside on my bike or visiting the clouds in a plane.
-                Significantly I have three boxers (Bee, Flo and Moby), one Beagle (Clause) and one tabby cat (Mustafa). They
-                have learned to accept me as an owner despite being a VET! I also inherit every clients animal friend as my
-                own whilst under my care.
-                </p>
+                  <div className="jeremy-collapse-profile">
+                  <a
+                    href="#jeremy"
+                    id="jeremy-collapse-profile"
+                    onClick={e => e.preventDefault()}
+                  >
+                    Read More
+                  </a>
+                  <UncontrolledCollapse
+                    role="tabpanel"
+                    toggler="#jeremy-collapse-profile"
+                    defaultClosed
+                  >
+                    <p>I now work independently as a “peripatetic vet” traveling to a variety of general practices and private clients
+                    in Lincolnshire and beyond offering my skills and services. I have found this the most rewarding phase of my
+                    career so far with more time devoted to my patients and clients consequently.
+                    </p>
+                    <p>Whilst I am primarily a surgeon, my view is to continue to develop treatment of my patients in the most
+                    holistic manner possible. I have a special interest in musculoskeletal function and pain management. I ask
+                    myself how can I make the greatest impact? Pain in animals is the most common condition we see as vets
+                    and the greatest area for improvement. My goal is therefore the “management of pain and promotion of
+                    quality of life”.
+                    </p>
+                    <p>Sarah my wife, Isabella and Amelia my daughters, are my inspiration. If I have any time between work and
+                    family (rare), I can be seen exploring the countryside on my bike or visiting the clouds in a plane.
+                    Significantly I have three boxers (Bee, Flo and Moby), one Beagle (Clause) and one tabby cat (Mustafa). They
+                    have learned to accept me as an owner despite being a VET! I also inherit every clients animal friend as my
+                    own whilst under my care.
+                    </p>
+                  </UncontrolledCollapse>
                 </div>
+
+              </div>
               </div>
             </Col>
             <Col  md="6">
@@ -175,15 +192,7 @@ function LandingPage() {
                     the family and horse riding when time permits.
                     </p>
                   </div>
-                  
-                  <div className="team right-column-profile">
-                    <div style={styles.fadeIn}>
-                      <img className="profile-picture" src={JemSarahWalk} alt="JS-Dog-Walk" />
-                    </div>
-                  </div>
-                  
                 </div>
-             
               </div>
             </Col>
           </Row>
