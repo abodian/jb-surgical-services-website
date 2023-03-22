@@ -49,16 +49,19 @@ function LandingNavbar() {
             </DropdownToggle>
             <DropdownMenu aria-labelledby="navbarDropdown">
               <DropdownItem header tag="a">
-                JB Surgical Services Menu
+                Our Services Information
               </DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                OUR SERVICES
+                SOFT TISSUE SURGERY
               </DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                ABOUT US
+                ORTHOPAEDIC
               </DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                CONTACT US
+                REGENERATIVE MEDICINE
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                PHOTOBIOMODULATION
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
@@ -66,7 +69,7 @@ function LandingNavbar() {
             <NavbarBrand
               id="navbar-brand"
             >
-              Menu
+              Our Services Menu
             </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
@@ -91,7 +94,7 @@ function LandingNavbar() {
               <NavItem>
               <Link className='nav-link' to="our-services" smooth={true} duration={500} style={{"cursor":"pointer"}}>
                   OUR SERVICES
-                </Link>
+              </Link>
               </NavItem>
               <NavItem>
                 <Link className='nav-link' to="about-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
