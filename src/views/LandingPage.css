@@ -50,6 +50,11 @@
   margin-bottom: 50px;
 }
 
+.contact-text {
+  margin-left: 40px;
+  font-size: 1.5rem;
+}
+
 #landing-page-title {
   font-weight: 900;
   font-size: 70px;
@@ -80,4 +85,10 @@
 
 #sarah-profile-picture {
   margin-top: 65px;
+}
+
+#contact-us-title {
+  margin-top: -50px !important;
+  font-weight: 900;
+  font-size: 70px;
 }

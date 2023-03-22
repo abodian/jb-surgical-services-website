@@ -4,6 +4,8 @@ import {useRef} from "react";
 import { fadeIn } from 'react-animations'
 import Radium, {StyleRoot} from 'radium';
 import { useInViewport } from 'react-in-viewport';
+import { SiMinutemailer } from '@icons-pack/react-simple-icons';
+
 
 
 // reactstrap components
@@ -182,25 +184,34 @@ function LandingPage() {
             </Col>
           </Row>
         </Container>
+       
         <div className="section section-about-us">
-        
-        <Container className="ml-auto mr-auto text-center">
-          <div className='about-us-title'><h1 id='our-services-title'>Our Services</h1></div> 
-          <OurServices/>
-
-        </Container>
+          <Container className="ml-auto mr-auto text-center">
+            <div className='about-us-title'>
+              <h1 id='our-services-title'>Our Services</h1>
+            </div> 
+            <OurServices/>
+          </Container>
         </div>
-        </div>
-      
-
-
+      </div>
         <div className="section section-contact-us text-center">
           <Container>
-            <h2 className="title">Contact Us</h2>
+            <h2 className="title" id='contact-us-title'>Contact Us</h2>
             <p className="description"></p>
             <Row>
-              <Col className="text-center ml-auto mr-auto" lg="6" md="8">
-                Contact Us Section Here
+              <Col className="text-center ml-auto mr-auto d-flex align-items-center justify-content-center" lg="6" md="8">
+                <table className="text-center" style={{ border: "none" }}>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <SiMinutemailer size={50} />
+                      </td>
+                      <td>
+                        <a className='contact-text' href="mailto:jeremybodian@surgicalservices.co.uk">jeremybodian@surgicalservices.co.uk</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </Col>
             </Row>
           </Container>

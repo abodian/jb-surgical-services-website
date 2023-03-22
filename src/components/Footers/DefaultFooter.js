@@ -32,7 +32,7 @@ function DefaultFooter() {
             </ul>
           </nav>
           <div className="copyright" id="copyright">
-            © {new Date().getFullYear()}
+            © Jeremy Bodian Surgical Services Ltd. {new Date().getFullYear()}
           </div>
         </Container>
       </footer>
