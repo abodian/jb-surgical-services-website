@@ -43,7 +43,7 @@ const OurServices = () => {
 
   return (
     <div>
-      <div className="accordion">
+      <div id='our-services' className="accordion">
         {accordionData.map(({ title, content }) => (
           <Accordion title={title} content={content} />
         ))}

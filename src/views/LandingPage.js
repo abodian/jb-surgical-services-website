@@ -5,7 +5,7 @@ import { fadeIn } from 'react-animations'
 import Radium, {StyleRoot} from 'radium';
 import { useInViewport } from 'react-in-viewport';
 import { SiMinutemailer } from 'react-icons/si';
-import { FaPhone } from 'react-icons/fa';
+// import { FaPhone } from 'react-icons/fa';
 
 
 
@@ -72,6 +72,7 @@ function LandingPage() {
                   
                     <div
                       className="image-container image-left"
+                      id='about-us'
                       style={{
                         backgroundImage: `url(${require("assets/img/jemsarahdog.jpg")})`,
                         ...styles.fadeIn,
@@ -79,7 +80,9 @@ function LandingPage() {
                     >
                     </div>
                   
-                  <div className='about-us-title'><h1 id='about-us-title'>About Us</h1></div> 
+                  <div className='about-us-title'>
+                    <h1 id='about-us-title'>About Us</h1>
+                  </div> 
                   <div className='about-us-intro'>JB Surgical Services are an established independent service, consisting of husband and wife, Jeremy and Sarah Bodian. 
                   </div>
                 </Col>
@@ -200,7 +203,7 @@ function LandingPage() {
             <h2 className="title" id='contact-us-title'>Contact Us</h2>
             <p className="description"></p>
             <Row>
-              <Col className="text-center ml-auto mr-auto d-flex align-items-center justify-content-center" lg="6" md="8">
+              <Col id='contact-us' className="text-center ml-auto mr-auto d-flex align-items-center justify-content-center" lg="6" md="8">
                 <table className="text-center" style={{ border: "none" }}>
                   <tbody>
                     <tr>
