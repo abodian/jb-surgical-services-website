@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
+import { Link } from "react-scroll";
+
 // reactstrap components
 import {
   Collapse,
@@ -88,19 +89,19 @@ function LandingNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink to="/" tag={Link}>
+              <Link className='nav-link' to="our-services" smooth={true} duration={500} style={{"cursor":"pointer"}}>
                   OUR SERVICES
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink to="/" tag={Link}>
+                <Link className='nav-link' to="about-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
                   ABOUT US
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink to="/" tag={Link}>
+                <Link className='nav-link' to="contact-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
                   CONTACT US
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem>
                 <NavLink
