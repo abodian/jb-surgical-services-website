@@ -17,6 +17,7 @@
 .accordion-title-text {
   font-weight: bold;
   margin-top: 5px;
+  margin-left: 30px;
 }
 
 .accordion-title:hover {

@@ -4,7 +4,8 @@ import {useRef} from "react";
 import { fadeIn } from 'react-animations'
 import Radium, {StyleRoot} from 'radium';
 import { useInViewport } from 'react-in-viewport';
-import { SiMinutemailer } from '@icons-pack/react-simple-icons';
+import { SiMinutemailer } from 'react-icons/si';
+import { FaPhone } from 'react-icons/fa';
 
 
 
@@ -16,7 +17,7 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import LandingNavbar from "components/Navbars/LandingNavbar.js";
 import OurServices from "./OurServices.js"
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg'
@@ -52,7 +53,7 @@ function LandingPage() {
   return (
     <>
     <StyleRoot>
-      <ExamplesNavbar />
+      <LandingNavbar />
       <div className="wrapper">
         <div ref={myRef} className="section section-about-us">
           <Container className="ml-auto mr-auto text-center">
@@ -210,6 +211,14 @@ function LandingPage() {
                         <a className='contact-text' href="mailto:jeremybodian@surgicalservices.co.uk">jeremybodian@surgicalservices.co.uk</a>
                       </td>
                     </tr>
+                    {/* <tr>
+                      <td>
+                        <FaPhone size={50} />
+                      </td>
+                      <td>
+                        <div className='contact-text' id='contact-phone'>01234567891</div>
+                      </td>
+                    </tr> */}
                   </tbody>
                 </table>
               </Col>

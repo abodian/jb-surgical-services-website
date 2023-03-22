@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 // reactstrap components
 import {
   Collapse,
@@ -16,7 +17,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function ExamplesNavbar() {
+function LandingNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
 
   return (
@@ -103,6 +104,20 @@ function ExamplesNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
+                  href="mailto:jeremybodian@surgicalservices.co.uk"
+                  id="email-us"
+                >
+                  <MdOutlineMarkEmailUnread size={30} />
+                  <p className="d-lg-none d-xl-none">Email</p>
+                </NavLink>
+                <UncontrolledTooltip target="#email-us">
+                  Email us
+                </UncontrolledTooltip>
+              </NavItem>
+
+
+              {/* <NavItem>
+                <NavLink
                   href=""
                   target="_blank"
                   id="twitter-tooltip"
@@ -139,7 +154,7 @@ function ExamplesNavbar() {
                 <UncontrolledTooltip target="#instagram-tooltip">
                   Follow us on Instagram
                 </UncontrolledTooltip>
-              </NavItem>
+              </NavItem> */}
             </Nav>
           </Collapse>
         </Container>
@@ -148,4 +163,4 @@ function ExamplesNavbar() {
   );
 }
 
-export default ExamplesNavbar;
+export default LandingNavbar;
