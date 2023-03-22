@@ -145,17 +145,16 @@ function LandingPage() {
               </div>
             </Col>
             <Col  md="6">
-              <div ref={myRef}>
-                {inViewport && (
-                  <div  className="team right-column-profile">
+              <div >
+                  <div  ref={myRef} className="team right-column-profile">
                   
-                  
+                  {inViewport && (
                     <div className="team right-column-profile">
                       <div style={styles.fadeIn}>
                         <img id='sarah-profile-picture' className="profile-picture" src={SarahProfilePicture} alt="Sarah-Profile" />
                       </div>
                     </div>
-                  
+                  )}
                   
                   <div className='profile-title'><h1 id='jeremy-profile-title'>Sarah Bodian</h1></div> 
                   <div className='profile-title'><h3 id='jeremy-profile-title'>Head Nurse</h3></div> 
@@ -178,7 +177,7 @@ function LandingPage() {
                   </div>
                   
                 </div>
-              )}
+             
               </div>
             </Col>
           </Row>

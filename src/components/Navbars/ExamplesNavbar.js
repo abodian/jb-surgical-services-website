@@ -50,6 +50,9 @@ function ExamplesNavbar() {
                 JB Surgical Services Menu
               </DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                OUR SERVICES
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
                 ABOUT US
               </DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -85,12 +88,17 @@ function ExamplesNavbar() {
             <Nav navbar>
               <NavItem>
                 <NavLink to="/" tag={Link}>
-                  About Us
+                  OUR SERVICES
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/" tag={Link}>
-                  Contact Us
+                  ABOUT US
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/" tag={Link}>
+                  CONTACT US
                 </NavLink>
               </NavItem>
               <NavItem>
