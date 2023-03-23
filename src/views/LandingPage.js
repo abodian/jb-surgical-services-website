@@ -129,7 +129,7 @@ function LandingPage() {
                 lg="6"
                 md="8"
               >
-                <table className="text-center" style={{ border: "none" }}>
+                <table id='contact-table' className="text-center" style={{ border: "none" }}>
                   <tbody>
                     <tr>
                       <td>

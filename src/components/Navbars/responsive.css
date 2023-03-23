@@ -1,0 +1,31 @@
+/* CSS for mobile menu */
+.mobile-menu {
+  display: none;
+}
+
+/* Show mobile menu only on mobile devices */
+@media (max-width: 991px) {
+  .mobile-menu {
+    display: block;
+    font-size: 0.5rem;
+    width: 60px;
+    align-items: center;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  #vet-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-dropdown {
+    float: left;
+    margin-right: 10px;
+  }
+}

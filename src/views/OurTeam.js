@@ -57,7 +57,7 @@ return (
                 onClick={toggleJeremyCollapse}
                 id='jeremy-profile-button'
               >
-              Read More
+              {jeremyCollapseOpen === false ? <div>Read More</div> : <div>Read Less</div> }
               </Button>
               <Collapse isOpen={jeremyCollapseOpen}>
                 <p>I now work independently as a “peripatetic vet” traveling to a variety of general practices and private clients

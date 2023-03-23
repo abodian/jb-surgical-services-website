@@ -19,6 +19,8 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
+require('./responsive.css')
+
 function LandingNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const navbarRef = React.useRef(null);
@@ -35,12 +37,11 @@ function LandingNavbar() {
         />
       ) : null}
       <Navbar className={"fixed-top "} color="info" expand="lg" ref={navbarRef}>
-        <Container>
-          <UncontrolledDropdown className="button-dropdown">
+        <Container className='navbar-container'>
+        <UncontrolledDropdown className="button-dropdown">
             <DropdownToggle
               caret
               data-toggle="dropdown"
-              href="#pablo"
               id="navbarDropdown"
               tag="a"
               onClick={(e) => e.preventDefault()}
@@ -49,24 +50,46 @@ function LandingNavbar() {
               <span className="button-bar"></span>
               <span className="button-bar"></span>
             </DropdownToggle>
-            <DropdownMenu aria-labelledby="navbarDropdown">
-              <DropdownItem header tag="a">
-                Navigate straight to a service
-              </DropdownItem>
-              <DropdownItem>
-                <Link className='vet-link' to="/soft-tissue-surgery">- SOFT TISSUE SURGERY</Link>
-              </DropdownItem>
-              <DropdownItem>
-                <Link className='vet-link' to="/orthopaedic">- ORTHOPAEDIC</Link>
-              </DropdownItem>
-              <DropdownItem>
-                <Link className='vet-link' to="/regenerative-medicine">- REGENERATIVE MEDICINE</Link>
-              </DropdownItem>
-              <DropdownItem>
-                <Link className='vet-link' to="/photobiomodulation">- PHOTOBIOMODULATION</Link>
-              </DropdownItem>
-            </DropdownMenu>
+              <DropdownMenu aria-labelledby="navbarDropdown">
+                <DropdownItem header tag="a">
+                  Navigate straight to a service
+                </DropdownItem>
+                <DropdownItem>
+                  <Link className='vet-link' to="/soft-tissue-surgery">- SOFT TISSUE SURGERY</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link className='vet-link' to="/orthopaedic">- ORTHOPAEDIC</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link className='vet-link' to="/regenerative-medicine">- REGENERATIVE MEDICINE</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <Link className='vet-link' to="/photobiomodulation">- PHOTOBIOMODULATION</Link>
+                </DropdownItem>
+              </DropdownMenu>
           </UncontrolledDropdown>
+        {/* Mobile Menu */}
+          <NavItem className="mobile-menu">
+          <Link className='nav-link' to="/">
+            HOME
+          </Link>
+          </NavItem>
+          <NavItem className="mobile-menu">
+          <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+            OUR SERVICES
+          </ScrollLink>
+          </NavItem>
+          <NavItem className="mobile-menu">
+          <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+            ABOUT US
+          </ScrollLink>
+          </NavItem>
+          <NavItem className="mobile-menu">
+          <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+            CONTACT US
+          </ScrollLink>
+          </NavItem>
+          
           <div className="navbar-translate">
             <NavbarBrand
               id="navbar-brand"
@@ -93,27 +116,27 @@ function LandingNavbar() {
             navbar
           >
             <Nav navbar>
-              <NavItem>
+              <NavItem className="desktop-menu">
                 <Link className='nav-link' to="/">
                   HOME
                 </Link>
               </NavItem>
-              <NavItem>
+              <NavItem className="desktop-menu">
                 <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   OUR SERVICES
                 </ScrollLink>
               </NavItem>
-              <NavItem>
+              <NavItem className="desktop-menu">
                 <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   ABOUT US
                 </ScrollLink>
               </NavItem>
-              <NavItem>
+              <NavItem className="desktop-menu">
                 <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   CONTACT US
                 </ScrollLink>
               </NavItem>
-              <NavItem>
+              <NavItem className="desktop-menu">
                 <NavLink
                   href="mailto:jeremybodian@surgicalservices.co.uk"
                   id="email-us"
@@ -125,47 +148,6 @@ function LandingNavbar() {
                   Email us
                 </UncontrolledTooltip>
               </NavItem>
-
-
-              {/* <NavItem>
-                <NavLink
-                  href=""
-                  target="_blank"
-                  id="twitter-tooltip"
-                >
-                  <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
-                </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href=""
-                  target="_blank"
-                  id="facebook-tooltip"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                  <p className="d-lg-none d-xl-none">Facebook</p>
-                </NavLink>
-                <UncontrolledTooltip target="#facebook-tooltip">
-                  Like us on Facebook
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href=""
-                  target="_blank"
-                  id="instagram-tooltip"
-                >
-                  <i className="fab fa-instagram"></i>
-                  <p className="d-lg-none d-xl-none">Instagram</p>
-                </NavLink>
-                <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
-                </UncontrolledTooltip>
-              </NavItem> */}
             </Nav>
           </Collapse>
         </Container>

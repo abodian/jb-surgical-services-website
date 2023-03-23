@@ -197,4 +197,17 @@
     padding-top: 1px;
     padding-bottom: 25px;
   }
+
+  @media only screen and (max-width: 480px) {
+    #contact-table {
+      width: 100%;
+    }
+    #contact-table td {
+      display: block;
+      width: 100%;
+    }
+    #contact-table td:first-child {
+      text-align: center;
+    }
+  }
 }
