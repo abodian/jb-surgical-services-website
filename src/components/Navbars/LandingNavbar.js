@@ -94,6 +94,11 @@ function LandingNavbar() {
           >
             <Nav navbar>
               <NavItem>
+                <Link className='nav-link' to="/">
+                  HOME
+                </Link>
+              </NavItem>
+              <NavItem>
                 <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   OUR SERVICES
                 </ScrollLink>
