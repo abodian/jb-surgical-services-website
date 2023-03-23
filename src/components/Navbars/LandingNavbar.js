@@ -21,6 +21,7 @@ import {
 
 function LandingNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const navbarRef = React.useRef(null);
 
   return (
     <>
@@ -33,7 +34,7 @@ function LandingNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top "} color="info" expand="lg">
+      <Navbar className={"fixed-top "} color="info" expand="lg" ref={navbarRef}>
         <Container>
           <UncontrolledDropdown className="button-dropdown">
             <DropdownToggle
@@ -93,17 +94,17 @@ function LandingNavbar() {
           >
             <Nav navbar>
               <NavItem>
-              <ScrollLink className='nav-link' to="our-services" smooth={true} duration={500} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   OUR SERVICES
-              </ScrollLink>
+                </ScrollLink>
               </NavItem>
               <NavItem>
-                <ScrollLink className='nav-link' to="about-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   ABOUT US
                 </ScrollLink>
               </NavItem>
               <NavItem>
-                <ScrollLink className='nav-link' to="contact-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   CONTACT US
                 </ScrollLink>
               </NavItem>
