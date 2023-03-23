@@ -54,16 +54,16 @@ function LandingNavbar() {
                 Navigate straight to a service
               </DropdownItem>
               <DropdownItem>
-                <Link to="/soft-tissue-surgery">SOFT TISSUE SURGERY</Link>
+                <Link className='vet-link' to="/soft-tissue-surgery">- SOFT TISSUE SURGERY</Link>
               </DropdownItem>
               <DropdownItem>
-                <Link to="/orthopaedic">ORTHOPAEDIC</Link>
+                <Link className='vet-link' to="/orthopaedic">- ORTHOPAEDIC</Link>
               </DropdownItem>
               <DropdownItem>
-                <Link to="/regenerative-medicine">REGENERATIVE MEDICINE</Link>
+                <Link className='vet-link' to="/regenerative-medicine">- REGENERATIVE MEDICINE</Link>
               </DropdownItem>
               <DropdownItem>
-                <Link to="/photobiomodulation">PHOTOBIOMODULATION</Link>
+                <Link className='vet-link' to="/photobiomodulation">- PHOTOBIOMODULATION</Link>
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>

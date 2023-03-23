@@ -66,6 +66,12 @@
   border-left: 0.3em solid transparent;
 }
 
+.vet-link {
+  color: black !important;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 #landing-page-title {
   font-weight: 900;
   font-size: 70px;
