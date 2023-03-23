@@ -1,7 +1,6 @@
 import React from "react";
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { Link as ScrollLink } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
 
 // reactstrap components
 import {
