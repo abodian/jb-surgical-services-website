@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 // reactstrap components
 import {
@@ -16,15 +17,12 @@ function OurServicesCard({serviceTitle, serviceContent, serviceLink}){
       <Card className="card-container">
         <CardBody>
           <CardTitle tag="h4"><b>{serviceTitle}</b></CardTitle>
-          <CardText className='service-content'>
-            {serviceContent}
-          </CardText>
-          <Button
-            color="primary"
-            href={`${serviceLink}`}
-          >
-            Read More
-          </Button>
+          <CardText className="service-content">{serviceContent}</CardText>
+          <Link to={serviceLink}>
+            <Button color="primary">
+              Read More
+            </Button>
+          </Link>
         </CardBody>
         <CardFooter className="text-muted mb-2"></CardFooter>
       </Card>
