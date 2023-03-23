@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@icons-pack/react-simple-icons": "^7.1.1",
+    "express": "^4.18.2",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.9",
     "install": "^0.13.0",
@@ -25,7 +26,8 @@
     "sass": "1.54.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:server": "node server.js",
+    "buildAndServe": "npm run build && npm run start:server",
     "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
