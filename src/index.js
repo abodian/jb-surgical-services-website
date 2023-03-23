@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/soft-tissue-surgery" render={(props) => <SoftTissueSurgeryPage {...props} />} />
+      <Route path="/soft-tissue-surgery" exact component={SoftTissueSurgeryPage} />
       <Route path="/orthopaedic" render={(props) => <OrthopaedicPage {...props} />} />
       <Route path="/regenerative-medicine" render={(props) => <RegenerativeMedicinePage {...props} />} />
       <Route path="/photobiomodulation" render={(props) => <PhotobiomodulationPage {...props} />} />
