@@ -49,7 +49,7 @@ function LandingNavbar() {
             </DropdownToggle>
             <DropdownMenu aria-labelledby="navbarDropdown">
               <DropdownItem header tag="a">
-                Our Services Information
+                Navigate straight to a service
               </DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
                 SOFT TISSUE SURGERY
@@ -69,7 +69,7 @@ function LandingNavbar() {
             <NavbarBrand
               id="navbar-brand"
             >
-              Our Services Menu
+              <div id="vet-menu">Vet Practice Menu</div>
             </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"

@@ -103,3 +103,92 @@
   font-weight: 900;
   font-size: 70px;
 }
+
+#vet-menu {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#jeremy-profile-button {
+  color: orange;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .description {
+    font-size: 20px;
+  }
+  .about-us-intro,
+  .about-us-full {
+    font-size: 16px;
+    padding: 0px 30px;
+  }
+  .profile-title {
+    margin-top: 10px;
+  }
+  .profile-text p {
+    font-size: 14px;
+  }
+  .profile-picture {
+    height: 50%;
+    width: 70%;
+  }
+  .contact-text {
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+  #landing-page-title,
+  #our-services-title,
+  #our-team-title,
+  #contact-us-title {
+    font-size: 50px;
+    margin-top: 40px;
+    margin-right: 0px;
+  }
+
+  .top-title {
+    margin-top: 0px;
+  }
+
+  .section-story-overview .image-container.image-left {
+    z-index: 1;
+  }
+
+  #about-us-title {
+    font-size: 50px;
+    margin-top: 40px;
+    margin-right: 0px;
+  }
+
+  #about-us {
+    margin-top: 0px !important;
+  }
+
+  .section-story-overview .image-container.image-left {
+    z-index: 1;
+    margin-bottom: 0px;
+  }
+
+  .section-story-overview {
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+
+  .about-us-intro {
+    margin-bottom: 20px;
+  }
+
+  .about-us-full {
+    margin-top: 30px;
+  }
+
+  .profile-text {
+    margin-bottom: 30px;
+  }
+
+  #our-services-section {
+    padding-top: 1px;
+    padding-bottom: 25px;
+  }
+}
