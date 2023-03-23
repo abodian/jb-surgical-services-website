@@ -1,20 +1,14 @@
-import React, {useRef, useState} from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Collapse,
-  Button,
-} from "reactstrap";
-import Radium, {StyleRoot} from 'radium';
-import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg'
-import SarahProfilePicture from '../assets/img/sarahprofile.JPEG'
-import { fadeIn } from 'react-animations'
-import { useInViewport } from 'react-in-viewport';
+import React, { useRef, useState } from 'react';
+import { Container, Row, Col, Collapse, Button } from 'reactstrap';
+import Radium, { StyleRoot } from 'radium';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg';
+import SarahProfilePicture from '../assets/img/sarahprofile.JPEG';
+import { fadeIn } from 'react-animations';
 
 const OurTeam = () => {
   const myRef = useRef();
-  const { inViewport } = useInViewport(myRef);
   const [jeremyCollapseOpen, setJeremyCollapseOpen] = useState(false);
 
   const styles = {
@@ -34,15 +28,16 @@ return (
       <Row>
         <Col ref={myRef} md="6">
           <div  className="team left-column-profile">
-
-          {inViewport && (
             <div className="team left-column-profile">
               <div style={styles.fadeIn}>
-                <img className="profile-picture" src={JeremyProfilePicture} alt="Jeremy-Profile" />
+                <LazyLoadImage
+                  className="profile-picture"
+                  src={JeremyProfilePicture}
+                  alt="Jeremy-Profile"
+                  effect="blur"
+                />
               </div>
             </div>
-          )}
-
             <div className='profile-title'><h1 id='jeremy-profile-title'>Jeremy Bodian</h1></div> 
             <div className='profile-title'><h3 id='jeremy-profile-title'>Clinical Director</h3></div> 
             <div className='profile-text'>
@@ -90,15 +85,17 @@ return (
         <Col  md="6">
           <div >
               <div  ref={myRef} className="team right-column-profile">
-              
-              {inViewport && (
-                <div className="team right-column-profile">
+                  <div className="team left-column-profile">
                   <div style={styles.fadeIn}>
-                    <img id='sarah-profile-picture' className="profile-picture" src={SarahProfilePicture} alt="Sarah-Profile" />
+                    <LazyLoadImage
+                      id="sarah-profile-picture"
+                      className="profile-picture"
+                      src={SarahProfilePicture}
+                      alt="Sarah-Profile"
+                      effect="blur"
+                    />
                   </div>
                 </div>
-              )}
-              
               <div className='profile-title'><h1 id='jeremy-profile-title'>Sarah Bodian</h1></div> 
               <div className='profile-title'><h3 id='jeremy-profile-title'>Head Nurse</h3></div> 
               <div className='profile-text'>
