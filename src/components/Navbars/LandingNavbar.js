@@ -1,6 +1,7 @@
 import React from "react";
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -51,16 +52,16 @@ function LandingNavbar() {
               <DropdownItem header tag="a">
                 Navigate straight to a service
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+              <DropdownItem href="/soft-tissue-surgery">
                 SOFT TISSUE SURGERY
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+              <DropdownItem href="/orthopaedic">
                 ORTHOPAEDIC
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+              <DropdownItem href="/regenerative-medicine">
                 REGENERATIVE MEDICINE
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+              <DropdownItem href="/photobiomodulation">
                 PHOTOBIOMODULATION
               </DropdownItem>
             </DropdownMenu>
@@ -92,19 +93,19 @@ function LandingNavbar() {
           >
             <Nav navbar>
               <NavItem>
-              <Link className='nav-link' to="our-services" smooth={true} duration={500} style={{"cursor":"pointer"}}>
+              <ScrollLink className='nav-link' to="our-services" smooth={true} duration={500} style={{"cursor":"pointer"}}>
                   OUR SERVICES
-              </Link>
+              </ScrollLink>
               </NavItem>
               <NavItem>
-                <Link className='nav-link' to="about-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="about-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
                   ABOUT US
-                </Link>
+                </ScrollLink>
               </NavItem>
               <NavItem>
-                <Link className='nav-link' to="contact-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="contact-us" smooth={true} duration={500} style={{"cursor":"pointer"}}>
                   CONTACT US
-                </Link>
+                </ScrollLink>
               </NavItem>
               <NavItem>
                 <NavLink

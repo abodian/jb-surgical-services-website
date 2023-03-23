@@ -6,6 +6,7 @@
     "@icons-pack/react-simple-icons": "^7.1.1",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.9",
+    "install": "^0.13.0",
     "moment": "2.29.4",
     "nouislider": "15.1.0",
     "radium": "^0.26.2",
