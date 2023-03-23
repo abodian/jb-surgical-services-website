@@ -21,8 +21,7 @@ function OurServicesCard({serviceTitle, serviceContent, serviceLink}){
           </CardText>
           <Button
             color="primary"
-            href="#service"
-            onClick={e => e.preventDefault()}
+            href={`${serviceLink}`}
           >
             Read More
           </Button>

@@ -4,7 +4,7 @@ import Radium, {StyleRoot} from 'radium';
 import { fadeIn } from 'react-animations'
 
 
-const Accordion = ({ title, content}) => {
+const Accordion = ({ title, content, link}) => {
   const [isActive, setIsActive] = useState(false);
 
   const styles = {
@@ -16,21 +16,21 @@ const Accordion = ({ title, content}) => {
 
   return (
     <StyleRoot>
-    <div className="accordion-item">
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-        <div className='accordion-title-text'>{title}</div>
-        <div className='is-open'>{isActive ? '-' : '+'}</div>
-      </div>
-      {isActive && 
-        <div className="accordion-content" style={{...styles.fadeIn}}>
-          <div className='our-services-card'>
-            {Object.entries(content).map(([key, value]) => (
-              <OurServicesCard serviceTitle={key} serviceContent={value} />
-            ))}
-          </div>
+      <div className="accordion-item">
+        <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+          <div className='accordion-title-text'>{title}</div>
+          <div className='is-open'>{isActive ? '-' : '+'}</div>
         </div>
-      }
-    </div>
+        {isActive && 
+          <div className="accordion-content" style={{...styles.fadeIn}}>
+            <div className='our-services-card'>
+              {Object.entries(content).map(([key, value]) => (
+                <OurServicesCard serviceTitle={key} serviceContent={value} serviceLink={link} />
+              ))}
+            </div>
+          </div>
+        }
+      </div>
     </StyleRoot>
   );
 };

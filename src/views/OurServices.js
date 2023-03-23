@@ -11,7 +11,9 @@ const OurServices = () => {
       'Ocular Surgery': "Ocular surgery involves surgeries on the eyes and their adnexa", 
       'Airway Surgery': "Airway surgery is a set of surgical procedures that deal with the respiratory tract", 
       'Hernia': "Hernia surgery involves repairing a weakened or torn abdominal wall", 
-      'Urinary': 'Urinary surgery refers to surgical procedures on the urinary tract, including the kidneys, ureters, bladder, and urethra'}
+      'Urinary': 'Urinary surgery refers to surgical procedures on the urinary tract, including the kidneys, ureters, bladder, and urethra'
+    },
+      link: '/soft-tissue-surgery'
     },
     {
       title: 'ORTHOPAEDIC',
@@ -27,25 +29,30 @@ const OurServices = () => {
         'Corrective Limb Alignment "Corrective Osteomies"': 'A surgical procedure to correct bone deformities in the limbs of animals.',
         'Spinal Surgery': 'A surgical procedure performed on the spine of animals to treat conditions such as herniated discs, spinal fractures, and spinal cord compression.',
         'Corns': 'A painful condition of the foot pad in animals that can require surgical removal.'
-      }
+      },
+        link: '/orthopaedic'
     },
     {
       title: 'REGENERATIVE MEDICINE',
       content: {
       'Stem Cell Therapy': 'A form of regenerative medicine that involves using stem cells, which have the ability to differentiate into various types of cells, to repair or replace damaged tissues in the body.', 
-      'Platelet Rich Plasma': "A type of regenerative medicine that involves using a patient's own blood plasma, which is enriched with platelets and growth factors, to promote tissue healing and regeneration"}
+      'Platelet Rich Plasma': "A type of regenerative medicine that involves using a patient's own blood plasma, which is enriched with platelets and growth factors, to promote tissue healing and regeneration"
+      },
+      link: '/regenerative-medicine'
     },
     {
       title: 'PHOTOBIOMODULATION',
-      content: {'Laser Therapy': 'A non-invasive treatment modality that uses low-level laser or light emitting diode (LED) devices to stimulate cellular activity and promote tissue healing, reducing inflammation and pain.'}
+      content: {'Laser Therapy': 'A non-invasive treatment modality that uses low-level laser or light emitting diode (LED) devices to stimulate cellular activity and promote tissue healing, reducing inflammation and pain.'
+      },
+      link: '/photobiomodulation'
     }
   ];
 
   return (
     <div>
       <div id='our-services' className="accordion">
-        {accordionData.map(({ title, content }) => (
-          <Accordion title={title} content={content} />
+        {accordionData.map(({ title, content, link }) => (
+          <Accordion title={title} content={content} link={link} />
         ))}
       </div>
     </div>
