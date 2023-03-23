@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { Link as ScrollLink } from "react-scroll";
 
@@ -52,17 +53,17 @@ function LandingNavbar() {
               <DropdownItem header tag="a">
                 Navigate straight to a service
               </DropdownItem>
-              <DropdownItem href="/soft-tissue-surgery">
-                SOFT TISSUE SURGERY
+              <DropdownItem>
+                <Link to="/soft-tissue-surgery">SOFT TISSUE SURGERY</Link>
               </DropdownItem>
-              <DropdownItem href="/orthopaedic">
-                ORTHOPAEDIC
+              <DropdownItem>
+                <Link to="/orthopaedic">ORTHOPAEDIC</Link>
               </DropdownItem>
-              <DropdownItem href="/regenerative-medicine">
-                REGENERATIVE MEDICINE
+              <DropdownItem>
+                <Link to="/regenerative-medicine">REGENERATIVE MEDICINE</Link>
               </DropdownItem>
-              <DropdownItem href="/photobiomodulation">
-                PHOTOBIOMODULATION
+              <DropdownItem>
+                <Link to="/photobiomodulation">PHOTOBIOMODULATION</Link>
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>

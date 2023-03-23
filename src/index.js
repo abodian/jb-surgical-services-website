@@ -11,18 +11,19 @@ import OrthopaedicPage from "views/OrthopaedicPage.js"
 import RegenerativeMedicinePage from "views/RegenerativeMedicinePage.js"
 import PhotobiomodulationPage from "views/PhotobiomodulationPage.js"
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
-    <Switch>
-      <Route path="/soft-tissue-surgery" exact component={SoftTissueSurgeryPage} />
+    <React.StrictMode>
+      <Switch>
+      <Route path="/soft-tissue-surgery" render={(props) => <SoftTissueSurgeryPage {...props} />} />
       <Route path="/orthopaedic" render={(props) => <OrthopaedicPage {...props} />} />
       <Route path="/regenerative-medicine" render={(props) => <RegenerativeMedicinePage {...props} />} />
       <Route path="/photobiomodulation" render={(props) => <PhotobiomodulationPage {...props} />} />
       <Route path="/" render={(props) => <LandingPage {...props} />} />
       <Redirect to="/" />
-    </Switch>
+      </Switch>
+    </React.StrictMode>
   </BrowserRouter>
 );
