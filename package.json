@@ -27,6 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "installAndBuild": "npm install && npm run build",
     "start:server": "node server.js",
     "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test",
