@@ -1,3 +1,17 @@
 .service-title {
   padding-top: 50px;
 }
+
+.service-information {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+p {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 900;
+}

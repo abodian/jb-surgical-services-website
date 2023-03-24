@@ -18,6 +18,7 @@ import {
   Container,
   UncontrolledTooltip,
 } from "reactstrap";
+import companyLogo from './logo-white.png';
 
 require('./responsive.css')
 
@@ -50,24 +51,25 @@ function LandingNavbar() {
               <span className="button-bar"></span>
               <span className="button-bar"></span>
             </DropdownToggle>
-              <DropdownMenu aria-labelledby="navbarDropdown">
-                <DropdownItem header tag="a">
-                  Navigate straight to a service
-                </DropdownItem>
-                <DropdownItem>
-                  <Link className='vet-link' to="/soft-tissue-surgery">- SOFT TISSUE SURGERY</Link>
-                </DropdownItem>
-                <DropdownItem>
-                  <Link className='vet-link' to="/orthopaedic">- ORTHOPAEDIC</Link>
-                </DropdownItem>
-                <DropdownItem>
-                  <Link className='vet-link' to="/regenerative-medicine">- REGENERATIVE MEDICINE</Link>
-                </DropdownItem>
-                <DropdownItem>
-                  <Link className='vet-link' to="/photobiomodulation">- PHOTOBIOMODULATION</Link>
-                </DropdownItem>
-              </DropdownMenu>
+            <DropdownMenu aria-labelledby="navbarDropdown">
+              <DropdownItem header tag="a">
+                Navigate straight to a service
+              </DropdownItem>
+              <Link className='vet-link' to="/soft-tissue-surgery">
+                <DropdownItem>- SOFT TISSUE SURGERY</DropdownItem>
+              </Link>
+              <Link className='vet-link' to="/orthopaedic">
+                <DropdownItem>- ORTHOPAEDIC</DropdownItem>
+              </Link>
+              <Link className='vet-link' to="/regenerative-medicine">
+                <DropdownItem>- REGENERATIVE MEDICINE</DropdownItem>
+              </Link>
+              <Link className='vet-link' to="/photobiomodulation">
+                <DropdownItem>- PHOTOBIOMODULATION</DropdownItem>
+              </Link>
+            </DropdownMenu>
           </UncontrolledDropdown>
+
         {/* Mobile Menu */}
           <NavItem className="mobile-menu">
           <Link className='nav-link' to="/">
@@ -89,7 +91,8 @@ function LandingNavbar() {
             CONTACT
           </ScrollLink>
           </NavItem>
-          
+          {/* End of mobile menu */}
+
           <div className="navbar-translate">
             <NavbarBrand
               id="navbar-brand"
