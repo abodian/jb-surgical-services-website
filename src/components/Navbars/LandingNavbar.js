@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Link } from 'react-router-dom';
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { Link as ScrollLink } from "react-scroll";
@@ -18,13 +18,15 @@ import {
   Container,
   UncontrolledTooltip,
 } from "reactstrap";
-import companyLogo from './logo-white.png';
 
 require('./responsive.css')
 
+const CustomNavbar = forwardRef((props, ref) => (
+  <Navbar {...props} ref={ref} />
+));
+
 function LandingNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-  const navbarRef = React.useRef(null);
 
   return (
     <>
@@ -37,7 +39,7 @@ function LandingNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top "} color="info" expand="lg" ref={navbarRef}>
+      <CustomNavbar className={"fixed-top "} color="info" expand="lg" >
         <Container className='navbar-container'>
         <UncontrolledDropdown className="button-dropdown">
             <DropdownToggle
@@ -77,22 +79,22 @@ function LandingNavbar() {
           </Link>
           </NavItem>
           <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+          <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
             SERVICES
           </ScrollLink>
           </NavItem>
           <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+          <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
             ABOUT
           </ScrollLink>
           </NavItem>
           <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+          <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
             TESTIMONIALS
           </ScrollLink>
           </NavItem>
           <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+          <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
             CONTACT
           </ScrollLink>
           </NavItem>
@@ -130,22 +132,22 @@ function LandingNavbar() {
                 </Link>
               </NavItem>
               <NavItem className="desktop-menu">
-                <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   OUR SERVICES
                 </ScrollLink>
               </NavItem>
               <NavItem className="desktop-menu">
-                <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   ABOUT US
                 </ScrollLink>
               </NavItem>
               <NavItem className="desktop-menu">
-                <ScrollLink className='nav-link' to="testimonials-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="testimonials-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   TESTIMONIALS
                 </ScrollLink>
               </NavItem>
               <NavItem className="desktop-menu">
-                <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+                <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   CONTACT US
                 </ScrollLink>
               </NavItem>
@@ -164,7 +166,7 @@ function LandingNavbar() {
             </Nav>
           </Collapse>
         </Container>
-      </Navbar>
+      </CustomNavbar>
     </>
   );
 }

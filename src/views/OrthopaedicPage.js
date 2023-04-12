@@ -1,8 +1,8 @@
 // Third-party libraries
-import React, { useRef } from "react";
+import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import { fadeIn } from "react-animations";
-import Radium, { StyleRoot } from "radium";
+
+import { StyleRoot } from "radium";
 import { SiMinutemailer } from "react-icons/si";
 
 // Components
@@ -16,7 +16,6 @@ import DefaultFooter from "components/Footers/DefaultFooter.js";
 require('./IndividualServices.css')
 
 function OrthopaedicPage() {
-  const myRef = useRef();
   
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -30,13 +29,6 @@ function OrthopaedicPage() {
     };
   }, []);
 
-  const styles = {
-    fadeIn: {
-      animation: 'x 1s',
-      animationName: Radium.keyframes(fadeIn, 'fadeIn')
-    }
-  }
-  
   return (
     <>
       <StyleRoot>

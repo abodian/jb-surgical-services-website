@@ -51,8 +51,8 @@ const OurServices = () => {
   return (
     <div>
       <div id='our-services' className="accordion">
-        {accordionData.map(({ title, content, link }) => (
-          <Accordion title={title} content={content} link={link} />
+        {accordionData.map(({ title, content, link }, index) => (
+          <Accordion key={index} title={title} content={content} link={link} />
         ))}
       </div>
     </div>

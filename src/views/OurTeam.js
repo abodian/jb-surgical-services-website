@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, forwardRef } from 'react';
 import { Container, Row, Col, Collapse, Button } from 'reactstrap';
 import Radium, { StyleRoot } from 'radium';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -7,8 +7,15 @@ import JeremyProfilePicture from '../assets/img/jeremyprofile.jpg';
 import SarahProfilePicture from '../assets/img/sarahprofile.JPEG';
 import { fadeIn } from 'react-animations';
 
+const ProfilePicture = forwardRef(({ className, src, alt, effect }, ref) => (
+  <div ref={ref}>
+    <LazyLoadImage className={className} src={src} alt={alt} effect={effect} />
+  </div>
+));
+
 const OurTeam = () => {
-  const myRef = useRef();
+  const jeremyRef = useRef();
+  const sarahRef = useRef();
   const [jeremyCollapseOpen, setJeremyCollapseOpen] = useState(false);
 
   const styles = {
@@ -18,27 +25,28 @@ const OurTeam = () => {
     }
   }
 
-const toggleJeremyCollapse = () => setJeremyCollapseOpen(!jeremyCollapseOpen);
+  const toggleJeremyCollapse = () => setJeremyCollapseOpen(!jeremyCollapseOpen);
 
-return (
-<StyleRoot>
-  <div className="text-center">
-    <Container className="ml-auto mr-auto text-center">
-      <h1 id='our-team-title'>Our Team</h1>
-      <Row>
-        <Col ref={myRef} md="6">
-          <div  className="team left-column-profile">
-            <div className="team left-column-profile">
-              <div style={styles.fadeIn}>
-                <LazyLoadImage
-                  className="profile-picture"
-                  src={JeremyProfilePicture}
-                  alt="Jeremy-Profile"
-                  effect="blur"
-                />
-              </div>
-            </div>
-            <div className='profile-title'><h1 id='jeremy-profile-title'>Jeremy Bodian</h1></div> 
+  return (
+    <StyleRoot>
+      <div className="text-center">
+        <Container className="ml-auto mr-auto text-center">
+          <h1 id='our-team-title'>Our Team</h1>
+          <Row>
+            <Col md="6">
+              <div className="team left-column-profile">
+                <div className="team left-column-profile">
+                  <div style={styles.fadeIn}>
+                    <ProfilePicture
+                      ref={jeremyRef}
+                      className="profile-picture"
+                      src={JeremyProfilePicture}
+                      alt="Jeremy-Profile"
+                      effect="blur"
+                    />
+                  </div>
+                </div>
+                <div className='profile-title'><h1 id='jeremy-profile-title'>Jeremy Bodian</h1></div> 
             <div className='profile-title'><h3 id='jeremy-profile-title'>Clinical Director</h3></div> 
             <div className='profile-text'>
             <p>My love of animals and science led me to achieve a Bachelor of Veterinary Science at Bristol University 2008
@@ -80,23 +88,23 @@ return (
             </div>
 
           </div>
-          </div>
-        </Col>
-        <Col  md="6">
-          <div >
-              <div  ref={myRef} className="team right-column-profile">
+              </div>
+            </Col>
+            <Col md="6">
+              <div>
+                <div className="team right-column-profile">
                   <div className="team left-column-profile">
-                  <div style={styles.fadeIn}>
-                    <LazyLoadImage
-                      id="sarah-profile-picture"
-                      className="profile-picture"
-                      src={SarahProfilePicture}
-                      alt="Sarah-Profile"
-                      effect="blur"
-                    />
+                    <div style={styles.fadeIn}>
+                      <ProfilePicture
+                        ref={sarahRef}
+                        className="profile-picture"
+                        src={SarahProfilePicture}
+                        alt="Sarah-Profile"
+                        effect="blur"
+                      />
+                    </div>
                   </div>
-                </div>
-              <div className='profile-title'><h1 id='jeremy-profile-title'>Sarah Bodian</h1></div> 
+                  <div className='profile-title'><h1 id='jeremy-profile-title'>Sarah Bodian</h1></div> 
               <div className='profile-title'><h3 id='jeremy-profile-title'>Head Nurse</h3></div> 
               <div className='profile-text'>
                 <p>I qualified as a Registered Veterinary Nurse from Myerscough college in 2009 and since have been
@@ -109,13 +117,13 @@ return (
                 the family and horse riding when time permits.
                 </p>
               </div>
-            </div>
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  </div>
-</StyleRoot>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </StyleRoot>
   );
 };
 
