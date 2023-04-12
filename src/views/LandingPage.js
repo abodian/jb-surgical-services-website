@@ -8,6 +8,7 @@ import { SiMinutemailer } from "react-icons/si";
 // Components
 import LandingNavbar from "components/Navbars/LandingNavbar.js";
 import OurServices from "./OurServices.js";
+import SimpleSlider from "components/Carousels/Testimonials.js"
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import OurTeam from "./OurTeam.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js"
@@ -120,6 +121,14 @@ function LandingPage() {
                 <h1 id="our-services-title">Our Services</h1>
               </div>
               <OurServices />
+            </Container>
+          </div>
+          <div id="testimonials-section" className="section section-about-us">
+            <Container className="ml-auto mr-auto text-center">
+              <div className="about-us-title">
+                <h1 id="testimonials-title">Testimonials</h1>
+              </div>
+              <SimpleSlider  />
             </Container>
           </div>
         </div>

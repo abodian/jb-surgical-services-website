@@ -87,6 +87,11 @@ function LandingNavbar() {
           </ScrollLink>
           </NavItem>
           <NavItem className="mobile-menu">
+          <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+            TESTIMONIALS
+          </ScrollLink>
+          </NavItem>
+          <NavItem className="mobile-menu">
           <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
             CONTACT
           </ScrollLink>
@@ -132,6 +137,11 @@ function LandingNavbar() {
               <NavItem className="desktop-menu">
                 <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
                   ABOUT US
+                </ScrollLink>
+              </NavItem>
+              <NavItem className="desktop-menu">
+                <ScrollLink className='nav-link' to="testimonials-title" smooth={true} duration={500} offset={-navbarRef.current?.clientHeight || -100} style={{"cursor":"pointer"}}>
+                  TESTIMONIALS
                 </ScrollLink>
               </NavItem>
               <NavItem className="desktop-menu">
