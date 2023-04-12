@@ -84,6 +84,8 @@
 }
 
 #about-us-title {
+  display: flex;
+  width: 100%;
   font-weight: 900;
   font-size: 70px;
   color: rgb(255, 255, 255);
@@ -114,7 +116,7 @@
 }
 
 #sarah-profile-picture {
-  margin-top: 65px;
+  margin-top: 80px;
 }
 
 #contact-us-title {
@@ -139,6 +141,37 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .top-header {
+    height: 20vh;
+    margin-bottom: 20px;
+  }
+
+  .slick-slide p {
+    font-size: 2vh !important;
+  }
+  .slick-slide h5 {
+    font-size: 2vh !important;
+  }
+  .slick-slider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 40%;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 24px;
+  }
+
   .description {
     font-size: 20px;
   }
@@ -163,6 +196,7 @@
   }
   #landing-page-title,
   #our-services-title,
+  #testimonials-title,
   #our-team-title,
   #contact-us-title {
     font-size: 50px;
@@ -182,6 +216,9 @@
     font-size: 50px;
     margin-top: 40px;
     margin-right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #about-us {

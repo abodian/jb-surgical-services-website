@@ -89,7 +89,7 @@ function LandingNavbar() {
           </ScrollLink>
           </NavItem>
           <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
+          <ScrollLink className='nav-link' to="testimonial-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
             TESTIMONIALS
           </ScrollLink>
           </NavItem>

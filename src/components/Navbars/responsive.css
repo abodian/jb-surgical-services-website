@@ -8,7 +8,7 @@
   .mobile-menu {
     display: block;
     font-size: 0.7rem;
-    flex-basis: auto; /* Change from 'flex' to 'flex-basis' and set it to 'auto' */
+    flex: auto; /* Change from 'flex' to 'flex-basis' and set it to 'auto' */
     text-align: center; /* Add text alignment */
     padding-right: 0;
     padding-left: 0;

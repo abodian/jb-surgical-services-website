@@ -35,7 +35,7 @@ function LandingPageHeader() {
         <div className="d-flex justify-content-center align-items-center h-100">
           <Container style={{ width: "150%" }}>
             <div>
-              <img src={logo} alt="JBSS logo" />
+              <img id="header-logo" src={logo} alt="JBSS logo" />
             </div>
           </Container>
         </div>

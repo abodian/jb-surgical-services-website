@@ -45,7 +45,7 @@ function LandingPage() {
   
   return (
     <>
-      <StyleRoot>
+      <StyleRoot className='root'>
         <LandingNavbar />
         <div
           className="image-container"
@@ -55,7 +55,7 @@ function LandingPage() {
             ...styles.fadeIn,
           }}
         ></div>
-        <div className="wrapper">
+        <div className="wrapper" >
           <div ref={myRef} className="section section-about-us">
             <Container className="ml-auto mr-auto text-center">
 

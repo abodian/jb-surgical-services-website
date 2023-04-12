@@ -93,7 +93,7 @@ const OurTeam = () => {
             <Col md="6">
               <div>
                 <div className="team right-column-profile">
-                  <div className="team left-column-profile">
+                  <div className="team left-column-profile" style={{marginTop: '30px'}}>
                     <div style={styles.fadeIn}>
                       <ProfilePicture
                         ref={sarahRef}
