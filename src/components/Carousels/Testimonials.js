@@ -14,13 +14,13 @@ export default class SimpleSlider extends Component {
       <div>
         <Slider {...settings}>
           <div style={{justifyContent: 'center' }}>
-            <p style={{color: 'white', textAlign: 'center'}}>
+            <p style={{color: 'white', textAlign: 'center', fontSize: '2.5vh'}}>
               "I cannot recommend the surgical service offered by Jeremy more
               highly. The opportunity to employ a visiting surgeon for our
               orthopaedic and complex soft tissue surgery needs has had a very
               positive impact on both our team and clients, allowing us to
               maintain an extensive in-house service for high value cases that
-              would otherwise have been referred. From TECA-BO to TPLO, Jeremy
+              would otherwise have been referred.<p></p> From TECA-BO to TPLO, Jeremy
               offers a comprehensive, reassuring and high-quality service which
               includes detailed pre-operative contact and thorough
               post-operative instructions. Jeremy integrates so seamlessly with
@@ -29,7 +29,7 @@ export default class SimpleSlider extends Component {
               availability for remote advice for tricky cases, including
               reviewing radiographs and chatting with clients about options is
               hugely valuable."
-              <p></p><h5>Dr Amanda Straughton BVMedSci (Hons) BVM BVS (Hons)
+              <p></p><h5>Dr Amanda Straughton<p></p> BVMedSci (Hons) BVM BVS (Hons)
               Cert AVP PG Cert VPS MRCVS Clinical Director, Orby Vets
               </h5>
             </p>
