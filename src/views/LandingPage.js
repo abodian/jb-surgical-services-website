@@ -10,10 +10,12 @@ import LandingNavbar from "components/Navbars/LandingNavbar.js";
 import OurServices from "./OurServices.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import OurTeam from "./OurTeam.js";
+import LandingPageHeader from "components/Headers/LandingPageHeader.js"
 
 // Assets
 import jemSarahDogImg from "assets/img/jemsarahdog.jpg";
 import jeremySarahProfImg from "assets/img/jeremysarahprof.jpg";
+import logo from "assets/img/jblogolandscape.jpg";
 
 // Styles
 require('./LandingPage.css')
@@ -44,15 +46,20 @@ function LandingPage() {
     <>
       <StyleRoot>
         <LandingNavbar />
+        <div
+          className="image-container"
+          id="logo"
+          style={{
+            backgroundImage: `url(${logo})`,
+            ...styles.fadeIn,
+          }}
+        ></div>
         <div className="wrapper">
           <div ref={myRef} className="section section-about-us">
             <Container className="ml-auto mr-auto text-center">
-              <div className="top-title">
-                <h1 id="landing-page-title">
-                  Jeremy Bodian
-                  <br />
-                  Surgical Services
-                </h1>
+
+              <div className="top-header">
+                <LandingPageHeader />
               </div>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="12">

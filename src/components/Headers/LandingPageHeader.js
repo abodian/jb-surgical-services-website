@@ -5,6 +5,8 @@ import { Container } from "reactstrap";
 
 // core components
 
+import logo from '../../assets/img/jblogolandscape.jpg'
+
 function LandingPageHeader() {
   let pageHeader = React.createRef();
 
@@ -21,21 +23,23 @@ function LandingPageHeader() {
       };
     }
   });
+
   return (
     <>
-      <div className="page-header page-header-small">
+
         <div
           className="page-header-image"
+          style={{ height: "10%" }}
           ref={pageHeader}
         ></div>
-        <div className="content-center">
-          <Container>
-            <h1 className="title">Jeremy Bodian Surgical Services</h1>
-            <div className="text-center">
+        <div className="d-flex justify-content-center align-items-center h-100">
+          <Container style={{ width: "150%" }}>
+            <div>
+              <img src={logo} alt="JBSS logo" />
             </div>
           </Container>
         </div>
-      </div>
+
     </>
   );
 }

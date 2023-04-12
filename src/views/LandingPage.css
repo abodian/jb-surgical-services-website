@@ -1,5 +1,10 @@
+.top-header {
+  height: 40vh;
+  margin-bottom: 40px;
+}
+
 .section-about-us {
-  background-color: #373e98;
+  background-color: #536a82;
 }
 
 .description {
