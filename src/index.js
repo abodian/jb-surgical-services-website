@@ -18,7 +18,7 @@ root.render(
     <React.StrictMode>
       <Switch>
       <Route path="/soft-tissue-surgery" render={(props) => <SoftTissueSurgeryPage {...props} />} />
-      <Route path="/orthopaedic" render={(props) => <OrthopaedicPage {...props} />} />
+      <Route path="/orthopaedics" render={(props) => <OrthopaedicPage {...props} />} />
       <Route path="/regenerative-medicine" render={(props) => <RegenerativeMedicinePage {...props} />} />
       <Route path="/photobiomodulation" render={(props) => <PhotobiomodulationPage {...props} />} />
       <Route path="/" render={(props) => <LandingPage {...props} />} />

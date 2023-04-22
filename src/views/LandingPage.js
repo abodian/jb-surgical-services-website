@@ -66,7 +66,7 @@ function LandingPage() {
                 <Col className="ml-auto mr-auto text-center" md="12">
                   <h5 className="description">
                     <b>
-                      Orthopaedic and soft tissue inhouse surgical consultancy in
+                      Orthopaedic and Soft-Tissue Inhouse Surgical Consultancy<br /> in
                       Lincolnshire and South Yorkshire
                     </b>
                     <br />
@@ -89,7 +89,7 @@ function LandingPage() {
                       <h1 id="about-us-title">About Us</h1>
                     </div>
                     <div className="about-us-intro">
-                      JB Surgical Services are an established independent service,
+                      JB Surgical Service are an established independent service,
                       consisting of husband and wife, Jeremy and Sarah Bodian.
                     </div>
                   </Col>
@@ -154,9 +154,9 @@ function LandingPage() {
                       <td>
                         <a
                           className="contact-text"
-                          href="mailto:jeremybodian@surgicalservices.co.uk"
+                          href="mailto:jeremybodian@surgicalservice.co.uk"
                         >
-                          jeremybodian@surgicalservices.co.uk
+                          jeremybodian@surgicalservice.co.uk
                         </a>
                       </td>
                     </tr>

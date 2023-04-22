@@ -53,6 +53,7 @@ function LandingNavbar() {
               <span className="button-bar"></span>
               <span className="button-bar"></span>
             </DropdownToggle>
+            {/* Vet menu */}
             <DropdownMenu aria-labelledby="navbarDropdown">
               <DropdownItem header tag="a">
                 Navigate straight to a service
@@ -60,8 +61,8 @@ function LandingNavbar() {
               <Link className='vet-link' to="/soft-tissue-surgery">
                 <DropdownItem>- SOFT TISSUE SURGERY</DropdownItem>
               </Link>
-              <Link className='vet-link' to="/orthopaedic">
-                <DropdownItem>- ORTHOPAEDIC</DropdownItem>
+              <Link className='vet-link' to="/orthopaedics">
+                <DropdownItem>- ORTHOPAEDICS</DropdownItem>
               </Link>
               <Link className='vet-link' to="/regenerative-medicine">
                 <DropdownItem>- REGENERATIVE MEDICINE</DropdownItem>
@@ -125,6 +126,7 @@ function LandingNavbar() {
             isOpen={collapseOpen}
             navbar
           >
+            {/* main links */}
             <Nav navbar>
               <NavItem className="desktop-menu">
                 <Link className='nav-link' to="/">
@@ -153,7 +155,7 @@ function LandingNavbar() {
               </NavItem>
               <NavItem className="desktop-menu">
                 <NavLink
-                  href="mailto:jeremybodian@surgicalservices.co.uk"
+                  href="mailto:jeremybodian@surgicalservice.co.uk"
                   id="email-us"
                 >
                   <MdOutlineMarkEmailUnread size={30} />

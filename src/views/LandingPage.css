@@ -89,6 +89,7 @@
   font-weight: 900;
   font-size: 70px;
   color: rgb(255, 255, 255);
+  margin-left: 50px;
   margin-top: 60px;
   margin-right: 100px;
 }
@@ -138,6 +139,14 @@
 
 #testimonials-section {
   padding-top: 0px;
+}
+
+@media only screen and (max-width: 820px) {
+  #about-us-title {
+    text-align: left;
+    font-size: 4vh;
+    margin-left: 0px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -216,6 +225,7 @@
     font-size: 50px;
     margin-top: 40px;
     margin-right: 0px;
+    margin-left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -54,7 +54,10 @@ function SoftTissueSurgeryPage() {
               <h3>Ocular surgery</h3>
 
               <p><li>Indolent ulcer treatment</li>
-              <li>Conjunctival grafts</li></p>
+              <li>Conjunctival grafts</li>
+              <li>Entropion</li>
+              <li>Cherry Eye</li>
+              </p>
 
               <h3>Airway Surgery</h3>
               

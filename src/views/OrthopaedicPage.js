@@ -37,7 +37,7 @@ function OrthopaedicPage() {
         <div id="our-services-section" className="section section-about-us">
             <Container className="ml-auto mr-auto text-center">
               <div className="service-title">
-                <h1 id="our-services-title">Orthopaedic Services</h1>
+                <h1 id="our-services-title">Orthopaedics Services</h1>
               </div>
 
               <div className="service-information">
@@ -74,7 +74,11 @@ function OrthopaedicPage() {
 
               <h3>Arthrodesis “Joint fusions”</h3>
               <p>Tarsal, Carpal and Shoulder</p>
-              <p>Corrective limb alignment “corrective osteotomies” (subject to imaging available)</p>
+
+              <h3>Corns</h3>
+              <p>Treatment of Corns by “Superficial Digital Flexor Tenotomy” provides high rates of cure compared to traditional Corn Removal procedures</p>
+              
+              <h3>Corrective limb alignment “corrective osteotomies” <br />(subject to imaging available)</h3>
 
               <h3>Spinal Surgery</h3>
               <p>I believe that this type of surgery is better placed in referral hospitals to make use of advanced imaging and spinal rehabilitation.</p>
