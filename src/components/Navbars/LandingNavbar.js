@@ -1,7 +1,6 @@
 import React, { forwardRef } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
-import { Link as ScrollLink } from "react-scroll";
 
 // reactstrap components
 import {
@@ -78,46 +77,66 @@ function LandingNavbar() {
                 Navigate straight to a service
               </DropdownItem>
               <Link className='vet-link' to="/soft-tissue-surgery">
-                <DropdownItem>- SOFT TISSUE SURGERY</DropdownItem>
+                <DropdownItem>SOFT TISSUE SURGERY</DropdownItem>
               </Link>
               <Link className='vet-link' to="/orthopaedics">
-                <DropdownItem>- ORTHOPAEDICS</DropdownItem>
+                <DropdownItem>ORTHOPAEDICS</DropdownItem>
               </Link>
               <Link className='vet-link' to="/regenerative-medicine">
-                <DropdownItem>- REGENERATIVE MEDICINE</DropdownItem>
+                <DropdownItem>REGENERATIVE MEDICINE</DropdownItem>
               </Link>
               <Link className='vet-link' to="/photobiomodulation">
-                <DropdownItem>- PHOTOBIOMODULATION</DropdownItem>
+                <DropdownItem>PHOTOBIOMODULATION</DropdownItem>
               </Link>
             </DropdownMenu>
           </UncontrolledDropdown>
 
         {/* Mobile Menu */}
-          <NavItem className="mobile-menu">
-          <Link className='nav-link' to="/">
-            HOME
-          </Link>
-          </NavItem>
-          <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
-            SERVICES
-          </ScrollLink>
-          </NavItem>
-          <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
-            ABOUT
-          </ScrollLink>
-          </NavItem>
-          <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="testimonial-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
-            TESTIMONIALS
-          </ScrollLink>
-          </NavItem>
-          <NavItem className="mobile-menu">
-          <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
-            CONTACT
-          </ScrollLink>
-          </NavItem>
+        <NavItem className="mobile-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("root")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                HOME
+              </span>
+            </NavItem>
+            <NavItem className="mobile-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("our-services-title")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                OUR SERVICES
+              </span>
+            </NavItem>
+            <NavItem className="mobile-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("about-us-title")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                ABOUT US
+              </span>
+            </NavItem>
+            <NavItem className="mobile-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("testimonials-title")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                TESTIMONIALS
+              </span>
+            </NavItem>
+            <NavItem className="mobile-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("contact-us-title")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                CONTACT US
+              </span>
+            </NavItem>
           {/* End of mobile menu */}
 
           <div className="navbar-translate">
