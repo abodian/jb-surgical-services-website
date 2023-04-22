@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { Link as ScrollLink } from "react-scroll";
 
@@ -27,6 +27,25 @@ const CustomNavbar = forwardRef((props, ref) => (
 
 function LandingNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  
+  const history = useHistory();
+
+  const handleNavClick = (target) => {
+    history.push('/');
+    setTimeout(() => {
+      const element = document.getElementById(target);
+      const offset = -window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition + offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }, 100);
+  };
 
   return (
     <>
@@ -105,7 +124,7 @@ function LandingNavbar() {
             <NavbarBrand
               id="navbar-brand"
             >
-              <div id="vet-menu">Vet Practice Menu</div>
+              <div id="vet-menu" style={{color: 'white', fontWeight: '400'}}>Vet Practice Menu</div>
             </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
@@ -128,31 +147,52 @@ function LandingNavbar() {
           >
             {/* main links */}
             <Nav navbar>
-              <NavItem className="desktop-menu">
-                <Link className='nav-link' to="/">
-                  HOME
-                </Link>
-              </NavItem>
-              <NavItem className="desktop-menu">
-                <ScrollLink className='nav-link' to="our-services-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
-                  OUR SERVICES
-                </ScrollLink>
-              </NavItem>
-              <NavItem className="desktop-menu">
-                <ScrollLink className='nav-link' to="about-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
-                  ABOUT US
-                </ScrollLink>
-              </NavItem>
-              <NavItem className="desktop-menu">
-                <ScrollLink className='nav-link' to="testimonials-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
-                  TESTIMONIALS
-                </ScrollLink>
-              </NavItem>
-              <NavItem className="desktop-menu">
-                <ScrollLink className='nav-link' to="contact-us-title" smooth={true} duration={500} offset={-window.document.getElementsByClassName("fixed-top")[0]?.clientHeight || -100} style={{"cursor":"pointer"}}>
-                  CONTACT US
-                </ScrollLink>
-              </NavItem>
+            <NavItem className="desktop-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("root")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                HOME
+              </span>
+            </NavItem>
+            <NavItem className="desktop-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("our-services-title")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                OUR SERVICES
+              </span>
+            </NavItem>
+            <NavItem className="desktop-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("about-us-title")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                ABOUT US
+              </span>
+            </NavItem>
+            <NavItem className="desktop-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("testimonials-title")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                TESTIMONIALS
+              </span>
+            </NavItem>
+            <NavItem className="desktop-menu">
+              <span
+                className="nav-link"
+                onClick={() => handleNavClick("contact-us-title")}
+                style={{ cursor: "pointer", color: "white" }}
+              >
+                CONTACT US
+              </span>
+            </NavItem>
+
               <NavItem className="desktop-menu">
                 <NavLink
                   href="mailto:jeremybodian@surgicalservice.co.uk"
