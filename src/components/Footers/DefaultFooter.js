@@ -12,7 +12,7 @@ function DefaultFooter() {
       <footer className="footer footer-default">
         <Container>
           <div className="copyright" id="copyright">
-            © Jeremy Bodian Surgical Services Ltd. {new Date().getFullYear()}
+            © Jeremy Bodian Surgical Service Ltd. {new Date().getFullYear()}
           </div>
         </Container>
       </footer>
