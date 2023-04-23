@@ -38,6 +38,24 @@ function PhotobiomodulationPage() {
               <div className="service-title">
                 <h1 id="our-services-title">Photobiomodulation</h1>
               </div>
+              <div className='service-information'>
+              <h3>Photobiomodulation (Laser Therapy)</h3>
+                <p>This non-painful, non-invasive and non-anesthetic biological (non-drug) treatment results in:</p>
+                <p>
+                  <li>Pain reduction</li>
+                  <li>Inflammation and oedema reduction</li>
+                  <li>Improved blood supply</li>
+                  <li>Improved healing</li>
+                  <li>Improved function</li>
+                </p>
+                <p>It is an important tool in the "holistic" approach to pain management, and can result in a reduction and even withdrawal of medications, therefore reducing costs and side effects whilst improving results. The indications for its use are vast. Applications for this technique include musculoskeletal pain, spinal dysfunction, and application prior, during and post-surgery to facilitate recovery. Its power can be manifested when used in conjunction with regenerative medicine (PRP and Stem Cell Therapy).</p>
+                <p>Laser sounds scary, but this is not a surgical laser nor a lightsaber! Photobiomodulation is a preferable term to laser. Most patients tolerate and even enjoy this treatment. Endorphin release has been known to result in sleeping during treatments in dogs and purring in cats!</p>
+                <p>This can be done in clinic or even in the home setting. A class 4 laser is used as not all machines are equal. Every case will need a bespoke treatment. Whilst benefits can often be seen within hours of treatment, there will need to be a commitment to treatment frequency for chronic conditions.</p>
+                <p>I really believe in this technique, not only due to the scientific literature or the clinical changes I see with my own experience, but for the reason it does keep me hands-on and in contact with patients during the treatment as a whole.</p>
+                <p>If you are interested in this modality or wonder if it is appropriate, please contact me to discuss further.</p>
+                <h5>Basic Biophysics</h5>
+                <p>Near-infrared light (810 and 980 nm) is applied to the tissue by a handpiece. Light contains energy in the form of photons. These photons are absorbed by tissue resulting in biophysical and biochemical changes. This specific wavelength is absorbed preferentially in the regions we want and not in regions we do not. The main target is Cytochrome Oxidase C in mitochondria. Cellular evidence is vast but the key mediators in this process are an increase in ATP, Nitric Oxide, Reactive Oxygen species and a cascade of alterations in cell signalling.</p>
+              </div>
             </Container>
           </div>
           <div className="section section-contact-us text-center">
