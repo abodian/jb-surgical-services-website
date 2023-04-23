@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://jbsurgicalservice.co.uk/sitemap.xml
