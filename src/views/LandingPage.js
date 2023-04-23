@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { fadeIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
-import { SiMinutemailer } from "react-icons/si";
 
 // Components
 import LandingNavbar from "components/Navbars/LandingNavbar.js";
@@ -12,6 +11,7 @@ import SimpleSlider from "components/Carousels/Testimonials.js"
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import OurTeam from "./OurTeam.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js"
+import ContactUs from "components/ContactUs/ContactUs.js"
 
 // Assets
 import jemSarahDogImg from "assets/img/jemsarahdog.jpg";
@@ -132,40 +132,7 @@ function LandingPage() {
             </Container>
           </div>
         </div>
-        <div className="section section-contact-us text-center">
-          <Container>
-            <h2 className="title" id="contact-us-title">
-              Contact Us
-            </h2>
-            <p className="description"></p>
-            <Row>
-              <Col
-                id="contact-us"
-                className="text-center ml-auto mr-auto d-flex align-items-center justify-content-center"
-                lg="6"
-                md="8"
-              >
-                <table id='contact-table' className="text-center" style={{ border: "none" }}>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <SiMinutemailer size={50} />
-                      </td>
-                      <td>
-                        <a
-                          className="contact-text"
-                          href="mailto:jeremybodian@surgicalservice.co.uk"
-                        >
-                          jeremybodian@surgicalservice.co.uk
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <ContactUs />
         <DefaultFooter />
       </StyleRoot>
     </>
