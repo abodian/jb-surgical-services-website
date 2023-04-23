@@ -1,13 +1,12 @@
 // Third-party libraries
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container} from "reactstrap";
 
 import { StyleRoot } from "radium";
-import { SiMinutemailer } from "react-icons/si";
 
 // Components
 import LandingNavbar from "components/Navbars/LandingNavbar.js";
-
+import ContactUs from "components/ContactUs/ContactUs.js"
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 
 // Assets
@@ -86,40 +85,7 @@ function OrthopaedicPage() {
               </div>
             </Container>
           </div>
-          <div className="section section-contact-us text-center">
-            <Container>
-              <h2 className="title" id="contact-us-title">
-                Contact Us
-              </h2>
-              <p className="description"></p>
-              <Row>
-                <Col
-                  id="contact-us"
-                  className="text-center ml-auto mr-auto d-flex align-items-center justify-content-center"
-                  lg="6"
-                  md="8"
-                >
-                  <table className="text-center" style={{ border: "none" }}>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <SiMinutemailer size={50} />
-                        </td>
-                        <td>
-                          <a
-                            className="contact-text"
-                            href="mailto:jeremybodian@surgicalservices.co.uk"
-                          >
-                            jeremybodian@surgicalservices.co.uk
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </Col>
-              </Row>
-            </Container>
-          </div>
+          <ContactUs />
           <DefaultFooter />
         </div>
       </StyleRoot>

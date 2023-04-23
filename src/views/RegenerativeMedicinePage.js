@@ -1,15 +1,12 @@
 // Third-party libraries
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 import { StyleRoot } from "radium";
-import { SiMinutemailer } from "react-icons/si";
 
 // Components
 import LandingNavbar from "components/Navbars/LandingNavbar.js";
-
+import ContactUs from "components/ContactUs/ContactUs.js"
 import DefaultFooter from "components/Footers/DefaultFooter.js";
-
-// Assets
 
 // Styles
 require('./IndividualServices.css')
@@ -55,48 +52,15 @@ function RegenerativeMedicine() {
               <h3>Process</h3>
                 <p>The system used is important. Companion Care CRT is validated and provides confidence in the end product after processing. The techniques require obtaining blood (for PRP) or bone marrow aspiration (Stem Cells) from the patient. This is therefore an “autologous” (from self) treatment minimising risks and side effects possible with other medications. Autologous sampling, bespoke laboratory processing and reinjection into the target site occurs in one procedure with this system. Typically, these procedures take less than 30 minutes and are a half day stay in the hospital.</p>
               <h3>PRP</h3>
-                <p>PRPis less invasive and cheaper. There is a requirement for a short sedation. Improvements can be seen with PRP for 6-12 months. One injection is required for many patients but some will require repeat injections over time.</p>
+                <p>PRP is less invasive and cheaper. There is a requirement for a short sedation. Improvements can be seen with PRP for 6-12 months. One injection is required for many patients but some will require repeat injections over time.</p>
               <h3>Stem Cell Therapy</h3>
-                <p>Stem Cell Theory does involve obtaining bone marrow aspiration and requires general anaesthesia. It is more expensive than PRP but more potent, longer lasting results are typically seen in comparison.</p>
+                <p>Stem Cell Therapy does involve obtaining bone marrow aspiration and requires general anaesthesia. It is more expensive than PRP but more potent, longer lasting results are typically seen in comparison.</p>
                 <p>For many cases PRP will be sufficient. However, for more sever osteoarthritis or if cost is not a factor, Stem Cell can be considered from the onset. PRP and Stem Cell combinations are something to consider at the same treatment time.</p>
                 <p>If you are interested in this area of treatment, please contact me to discuss further as to the suitability in your case.</p>
               </div>
             </Container>
           </div>
-          <div className="section section-contact-us text-center">
-            <Container>
-              <h2 className="title" id="contact-us-title">
-                Contact Us
-              </h2>
-              <p className="description"></p>
-              <Row>
-                <Col
-                  id="contact-us"
-                  className="text-center ml-auto mr-auto d-flex align-items-center justify-content-center"
-                  lg="6"
-                  md="8"
-                >
-                  <table className="text-center" style={{ border: "none" }}>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <SiMinutemailer size={50} />
-                        </td>
-                        <td>
-                          <a
-                            className="contact-text"
-                            href="mailto:jeremybodian@surgicalservices.co.uk"
-                          >
-                            jeremybodian@surgicalservices.co.uk
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </Col>
-              </Row>
-            </Container>
-          </div>
+          <ContactUs />
           <DefaultFooter />
         </div>
       </StyleRoot>
