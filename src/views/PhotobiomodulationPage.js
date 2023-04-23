@@ -36,10 +36,9 @@ function PhotobiomodulationPage() {
         <div id="our-services-section" className="section section-about-us">
             <Container className="ml-auto mr-auto text-center">
               <div className="service-title">
-                <h1 id="our-services-title">Photobiomodulation</h1>
+                <h1 id="our-services-title">Photobiomodulation (Laser Therapy)</h1>
               </div>
               <div className='service-information'>
-              <h3>Photobiomodulation (Laser Therapy)</h3>
                 <p>This non-painful, non-invasive and non-anesthetic biological (non-drug) treatment results in:</p>
                 <p>
                   <li>Pain reduction</li>

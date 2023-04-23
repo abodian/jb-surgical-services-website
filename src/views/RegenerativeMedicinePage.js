@@ -37,11 +37,10 @@ function RegenerativeMedicine() {
         <div id="our-services-section" className="section section-about-us">
             <Container className="ml-auto mr-auto text-center">
               <div className="service-title">
-                <h1 id="our-services-title">Regenerative Medicine</h1>
+                <h1 id="our-services-title">Regenerative Medicine <br /> (Stem Cell Therapy and Platelet Rich Plasma)</h1>
               </div>
 
               <div className="service-information">
-              <h3>Regenerative Medicine (Stem Cell Therapy and Platelet Rich Plasma)</h3>
                 <p>I am very excited to be able to offer this service. Regenerative medicine is well known in human and equine fields. Please do not forget our smaller furry friends! After all, significant research for humans has come from animal models. There is a large body of evidence to support this modality. Fortunately, it seems we are starting to catch up with are American and Human counterparts in clinical application.</p>
               <h3>Palliation vs Cure</h3> 
                 <p>Drugs palliate disease. When we withdraw medications, the symptoms are unmasked again. Regenerative medicine is focused more on a curative process by actively modifying the disease and its progression. This can help in the short term but also should be seen as an investment for the future health of the patient. These treatments are variable in cost but can reduce total costs and increase treatment success in the long run.</p>
